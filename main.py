@@ -1,2 +1,1 @@
-print("hi")
-print("say less")
+print('Bereketab')
