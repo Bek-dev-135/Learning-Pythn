@@ -51,24 +51,48 @@ str= "01234567"
 # basket = ['a','b', 'c', 'd', 'e'];
 # print ("c" in basket)
 
-basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+# basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+#
+# # 1. Remove the Banana from the list
+#
+# # 2. Remove "Blueberries" from the list.
+#
+# # 3. Put "Kiwi" at the end of the list.
+#
+# # 4. Add "Apples" at the beginning of the list
+#
+# # 5. Count how many apples in the basket
+#
+# # 6. empty the basket
+# basket.remove("Banana")
+# basket.pop()
+# basket.append("kiwi")
+# basket.insert(0,'Apples')
+# print(basket)
+# print(basket.count("Apples"))
+# basket.clear()
+# print(basket)
 
-# 1. Remove the Banana from the list
 
-# 2. Remove "Blueberries" from the list.
+sentence= '!'
+new_sentence= sentence.join(['hi', 'my','name', 'is', 'john'])
+print (new_sentence)
 
-# 3. Put "Kiwi" at the end of the list.
 
-# 4. Add "Apples" at the beginning of the list
+new_sentence1= "!".join(['hi', 'my','name', 'is', 'john'])
+print (new_sentence1)
 
-# 5. Count how many apples in the basket
 
-# 6. empty the basket
-basket.remove("Banana")
-basket.pop()
-basket.append("kiwi")
-basket.insert(0,'Apples')
-print(basket)
-print(basket.count("Apples"))
-basket.clear()
-print(basket)
+#fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
+friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+
+friends.append('Stanley')
+friends.sort()
+print(friends)
+
+friends1 = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+
+new_friend = ['Stanley']
+friends1+= new_friend
+friends1.sort()
+print(friends1)
