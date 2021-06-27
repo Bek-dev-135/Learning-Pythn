@@ -33,15 +33,17 @@ str= "01234567"
 #
 # print (f"{user} your password {'*' * len(ps)} is  {len(ps)} letters long")
 
-i=10
-b=10
-while (i>1):
-    astrik= (2*(10-b))+1
-    print (f"{' '* i} {'*'*astrik}")
-    i-=1
-    b-=1
-c=1
-while(c<3):
-    print(f"{' '* 8} {'*'*5}")
-    c+=1
+# i=10
+# b=10
+# while (i>1):
+#     astrik= (2*(10-b))+1
+#     print (f"{' '* i} {'*'*astrik}")
+#     i-=1
+#     b-=1
+# c=1
+# while(c<3):
+#     print(f"{' '* 8} {'*'*5}")
+#     c+=1
 
+basket = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+print(basket[1][1][0])
