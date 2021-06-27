@@ -73,26 +73,76 @@ str= "01234567"
 # basket.clear()
 # print(basket)
 
+#
+# sentence= '!'
+# new_sentence= sentence.join(['hi', 'my','name', 'is', 'john'])
+# print (new_sentence)
+#
+#
+# new_sentence1= "!".join(['hi', 'my','name', 'is', 'john'])
+# print (new_sentence1)
+#
+#
+# #fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
+# friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+#
+# friends.append('Stanley')
+# friends.sort()
+# print(friends)
+#
+# friends1 = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+#
+# new_friend = ['Stanley']
+# friends1+= new_friend
+# friends1.sort()
+# print(friends1)
 
-sentence= '!'
-new_sentence= sentence.join(['hi', 'my','name', 'is', 'john'])
-print (new_sentence)
+
+a,*b,c=[1,2,3,4,5,6,7]
+print(a)
+print(b)
+print(c)
 
 
-new_sentence1= "!".join(['hi', 'my','name', 'is', 'john'])
-print (new_sentence1)
+dictionary={
+    'name': [1,2,3],
+    'greeting':'hello',
+    'age': 20
+}
+print ( 'name' in dictionary.keys())
+print ( 'hello' in dictionary.values())
 
 
-#fix this code so that it prints a sorted list of all of our friends (alphabetical). Scroll to see answer
-friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
 
-friends.append('Stanley')
-friends.sort()
-print(friends)
+#1 Create a user profile for your new game. This user profile will be stored in a dictionary with keys: 'age', 'username', 'weapons', 'is_active' and 'clan'
 
-friends1 = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+#2 iterate and print all the keys in the above user.
 
-new_friend = ['Stanley']
-friends1+= new_friend
-friends1.sort()
-print(friends1)
+#3 Add a new weapon to your user
+
+#4 Add a new key to include 'is_banned'. Set it to false
+
+#5 Ban the user by setting the previous key to True
+
+#6 create a new user2 my copying the previous user and update the age value and username value.
+
+
+dictionary={
+    'age':20,
+    'username':"bek",
+    'weapons':['sword', "dagger"],
+    'is_active': True,
+    'clan': 'nots'
+}
+print ( dictionary.keys())
+dictionary.update({'weapons':['sworrd', "dagger",'saber']})
+print ( dictionary)
+dictionary.update({'is_banned':False})
+print ( dictionary)
+dictionary.update({'is_banned':True})
+print ( dictionary)
+
+user2=dictionary.copy()
+user2.update({'age':45})
+user2.update({'username':'toro'})
+print ( user2)
