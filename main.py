@@ -20,3 +20,10 @@ str= "01234567"
 #[strat:stop:step over]
 print (str[0:3])
 print (str[0:7:2])
+
+quote="to be or not to be"
+
+print (quote.upper())
+print (quote.capitalize())
+print (quote.find("be"))
+print (quote.replace("be","me"))
