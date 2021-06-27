@@ -18,12 +18,20 @@
 str= "01234567"
 
 #[strat:stop:step over]
-print (str[0:3])
-print (str[0:7:2])
+# print (str[0:3])
+# print (str[0:7:2])
+#
+# quote="to be or not to be"
+#
+# print (quote.upper())
+# print (quote.capitalize())
+# print (quote.find("be"))
+# print (quote.replace("be","me"))
 
-quote="to be or not to be"
+user=input("user name")
+ps=input ("password")
+len=len(ps)
+astrik= '*' * len
+print (f"{user} your password {astrik} is  {len} letters long")
 
-print (quote.upper())
-print (quote.capitalize())
-print (quote.find("be"))
-print (quote.replace("be","me"))
+
