@@ -126,23 +126,30 @@ print ( 'hello' in dictionary.values())
 
 #6 create a new user2 my copying the previous user and update the age value and username value.
 
+#
+# dictionary={
+#     'age':20,
+#     'username':"bek",
+#     'weapons':['sword', "dagger"],
+#     'is_active': True,
+#     'clan': 'nots'
+# }
+# print ( dictionary.keys())
+# #dictionary.update({'weapons':['sworrd', "dagger",'saber']})
+# dictionary['weapons'].append('shield')
+# print ( dictionary)
+# dictionary.update({'is_banned':False})
+# print ( dictionary)
+# dictionary.update({'is_banned':True})
+# print ( dictionary)
+#
+# user2=dictionary.copy()
+# user2.update({'age':45})
+# user2.update({'username':'toro'})
+# # user2.update({'age': 45, 'username': 'Toro'})
+# print ( user2)
 
-dictionary={
-    'age':20,
-    'username':"bek",
-    'weapons':['sword', "dagger"],
-    'is_active': True,
-    'clan': 'nots'
-}
-print ( dictionary.keys())
-dictionary.update({'weapons':['sworrd', "dagger",'saber']})
-print ( dictionary)
-dictionary.update({'is_banned':False})
-print ( dictionary)
-dictionary.update({'is_banned':True})
-print ( dictionary)
+school = {'Bobby','Tammy','Jammy','Sally','Danny'}
 
-user2=dictionary.copy()
-user2.update({'age':45})
-user2.update({'username':'toro'})
-print ( user2)
+#during class, the teachers take attendance and compile it into a list.
+attendance_list = ['Jammy', 'Bobby', 'Danny', 'Sally']
