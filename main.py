@@ -234,24 +234,56 @@
 #
 # print(set(duplicates))
 
+#
+# # Function 101
+# def say_hello(name, emoji):
+#     print(f'hello {name} {emoji}')
+#
+# # positional argument
+# say_hello('bek',':)')
+#
+# #keyword argument
+#
+# say_hello(emoji=':)',name='bek')
+#
+# #default parametes
+# def say_hello(name="darth", emoji=':('):
+#     print(f'hello {name} {emoji}')
+#
+# # positional argument
+# say_hello('bek',':)')
+# say_hello()
+# say_hello('happy')
+# say_hello(emoji=':0')
 
-# Function 101
-def say_hello(name, emoji):
-    print(f'hello {name} {emoji}')
+# age = input("What is your age?: ")
+#
+# if int(age) < 18:
+# 	print("Sorry, you are too young to drive this car. Powering off")
+# elif int(age) > 18:
+# 	print("Powering On. Enjoy the ride!");
+# elif int(age) == 18:
+# 	print("Congratulations on your first year of driving. Enjoy the ride!")
 
-# positional argument
-say_hello('bek',':)')
+#1. Wrap the above code in a function called checkDriverAge(). Whenever you call t
+# his function, you will get prompted for age.
+# Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
 
-#keyword argument
+#2 Instead of using the input(). Now, make the checkDriverAge() function accept an
+# argument of age, so that if you enter:
+#checkDriverAge(92);
+#it returns "Powering On. Enjoy the ride!"
+#also make it so that the default age is set to 0 if no argument is given.
 
-say_hello(emoji=':)',name='bek')
+def checkDriverAge(age=0):
+    p=""
+    if int(age) < 18:
+        p= "Sorry, you are too young to drive this car. Powering off"
+    elif int(age) > 18:
+        p="Powering On. Enjoy the ride!"
+    elif int(age) == 18:
+        p= "Congratulations on your first year of driving. Enjoy the ride!"
+    return print(p)
 
-#default parametes
-def say_hello(name="darth", emoji=':('):
-    print(f'hello {name} {emoji}')
+checkDriverAge(95)
 
-# positional argument
-say_hello('bek',':)')
-say_hello()
-say_hello('happy')
-say_hello(emoji=':0')
