@@ -191,35 +191,67 @@
 #
 # for key, value in user.items():
 #     print (key, value)
+#
+# picture = [
+#   [0,0,0,1,0,0,0],
+#   [0,0,1,1,1,0,0],
+#   [0,1,1,1,1,1,0],
+#   [1,1,1,1,1,1,1],
+#   [0,0,0,1,0,0,0],
+#   [0,0,0,1,0,0,0]
+# ]
+# i=0
+# string=''
+# while i<6:
+#     j = 0
+#     while j<7:
+#         if picture[i][j]==0:
+#             print(" ", end='')
+#         else:
+#             print("*", end='')
+#         j+=1
+#     print('')
+#
+#
+#     i+=1
+#
+#
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+#
+# for char in some_list:
+#     checker=some_list.count(char)
+#     if (checker>1):
+#         print (char+ ' is a duplicate')
+#         some_list.remove(char)
+#
+#
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+#
+# duplicates = []
+# for value in some_list:
+#     if some_list.count(value) > 1:
+#             duplicates.append(value)
+#
+# print(set(duplicates))
 
-picture = [
-  [0,0,0,1,0,0,0],
-  [0,0,1,1,1,0,0],
-  [0,1,1,1,1,1,0],
-  [1,1,1,1,1,1,1],
-  [0,0,0,1,0,0,0],
-  [0,0,0,1,0,0,0]
-]
-i=0
-string=''
-while i<6:
-    j = 0
-    while j<7:
-        if picture[i][j]==0:
-            print(" ", end='')
-        else:
-            print("*", end='')
-        j+=1
-    print('')
 
+# Function 101
+def say_hello(name, emoji):
+    print(f'hello {name} {emoji}')
 
-    i+=1
+# positional argument
+say_hello('bek',':)')
 
+#keyword argument
 
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+say_hello(emoji=':)',name='bek')
 
-for char in some_list:
-    checker=some_list.count(char)
-    if (checker>1):
-        print (char+ ' is a duplicate')
-        some_list.remove(char)
+#default parametes
+def say_hello(name="darth", emoji=':('):
+    print(f'hello {name} {emoji}')
+
+# positional argument
+say_hello('bek',':)')
+say_hello()
+say_hello('happy')
+say_hello(emoji=':0')
