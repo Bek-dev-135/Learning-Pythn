@@ -169,23 +169,57 @@
 # #Ternary Operator
 # is_tall= True
 # print('Tall' if is_tall else 'short')
+#
+# user={
+#     'name': "Abed",
+#     'age ': 20,
+#     'is racist': True
+#
+# }
+#
+# for item in user:
+#     print (item)
+#
+# for item in user.items():
+#     print (item)
+#
+# for item in user.keys():
+#     print (item)
+#
+# for item in user.values():
+#     print(item)
+#
+# for key, value in user.items():
+#     print (key, value)
 
-user={
-    'name': "Abed",
-    'age ': 20,
-    'is racist': True
+picture = [
+  [0,0,0,1,0,0,0],
+  [0,0,1,1,1,0,0],
+  [0,1,1,1,1,1,0],
+  [1,1,1,1,1,1,1],
+  [0,0,0,1,0,0,0],
+  [0,0,0,1,0,0,0]
+]
+i=0
+string=''
+while i<6:
+    j = 0
+    while j<7:
+        if picture[i][j]==0:
+            print(" ", end='')
+        else:
+            print("*", end='')
+        j+=1
+    print('')
 
-}
 
-for item in user:
-    print (item)
+    i+=1
 
-for item in user.items():
-    print (item)
 
-for item in user.keys():
-    print (item)
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 
-for item in user.values():
-    print(item)
-
+for char in some_list:
+    checker=some_list.count(char)
+    if (checker>1):
+        print (char+ ' is a duplicate')
+        some_list.remove(char)
