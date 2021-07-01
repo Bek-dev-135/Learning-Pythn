@@ -275,15 +275,37 @@
 #it returns "Powering On. Enjoy the ride!"
 #also make it so that the default age is set to 0 if no argument is given.
 
-def checkDriverAge(age=0):
-    p=""
-    if int(age) < 18:
-        p= "Sorry, you are too young to drive this car. Powering off"
-    elif int(age) > 18:
-        p="Powering On. Enjoy the ride!"
-    elif int(age) == 18:
-        p= "Congratulations on your first year of driving. Enjoy the ride!"
-    return print(p)
+# def checkDriverAge(age=0):
+#     p=""
+#     if int(age) < 18:
+#         p= "Sorry, you are too young to drive this car. Powering off"
+#     elif int(age) > 18:
+#         p="Powering On. Enjoy the ride!"
+#     elif int(age) == 18:
+#         p= "Congratulations on your first year of driving. Enjoy the ride!"
+#     return print(p)
+#
+# checkDriverAge(95)
 
-checkDriverAge(95)
+def highest_even(li):
+    even=[]
+    for item in li:
+        if item%2==0:
+            even.append(item)
+    print (even)
+    j=1
+    highet = even[0]
+    while j<len(even):
+
+        if even[j]>highet:
+               highet=even[j]
+               j+=1
+
+        else:
+
+            j+=1
+    return print(highet)
+
+highest_even([10,8,5,3,7,2,11,12,14])
+
 
