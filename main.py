@@ -308,11 +308,45 @@
 # highest_even([10,8,5,3,7,2,11,12,14])
 
 
-class playerCharacter:
-    def __init__(self, name ,age):
-        self.a=name
-        self.b=age
+# class playerCharacter:
+#     membership= True
+#     def __init__(self, name ,age):
+#         self.a=name
+#         self.b=age
+#
+# player1= playerCharacter('Cindy', 20)
+# player1.membership= False
+#
+# print(player1.a)
+# print(player1.membership)
 
-player1= playerCharacter('Cindy', 20)
+# 1 Instantiate the Cat object with 3 cats
 
-print(player1.a)
+
+
+# 2 Create a function that finds the oldest cat
+
+
+
+# 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
+
+class Cat:
+    species = 'mammal'
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+def oldestCat(list):
+        return max(list)
+
+cat1 = Cat('tokyo', 3)
+cat2 = Cat('simp', 2)
+cat3 = Cat('toro', 4)
+
+cats = [cat1.age, cat2.age, cat3.age]
+
+
+print(f"The oldest cat is {oldestCat(cats)} years old.")
+
+
