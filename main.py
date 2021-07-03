@@ -3,7 +3,7 @@
 # print(2**3)
 # print(2//4)
 # print(3//4)
-#print(5//4)
+# print(5//4)
 # print(round(3.4))
 # print(abs(-10))
 # print("Hello {}, your balance is {}.".format("Cindy", 50))
@@ -17,7 +17,7 @@
 #
 # str= "01234567"
 
-#[strat:stop:step over]
+# [strat:stop:step over]
 # print (str[0:3])
 # print (str[0:7:2])
 #
@@ -113,18 +113,17 @@
 # print ( 'hello' in dictionary.values())
 
 
+# 1 Create a user profile for your new game. This user profile will be stored in a dictionary with keys: 'age', 'username', 'weapons', 'is_active' and 'clan'
 
-#1 Create a user profile for your new game. This user profile will be stored in a dictionary with keys: 'age', 'username', 'weapons', 'is_active' and 'clan'
+# 2 iterate and print all the keys in the above user.
 
-#2 iterate and print all the keys in the above user.
+# 3 Add a new weapon to your user
 
-#3 Add a new weapon to your user
+# 4 Add a new key to include 'is_banned'. Set it to false
 
-#4 Add a new key to include 'is_banned'. Set it to false
+# 5 Ban the user by setting the previous key to True
 
-#5 Ban the user by setting the previous key to True
-
-#6 create a new user2 my copying the previous user and update the age value and username value.
+# 6 create a new user2 my copying the previous user and update the age value and username value.
 
 #
 # dictionary={
@@ -265,15 +264,15 @@
 # elif int(age) == 18:
 # 	print("Congratulations on your first year of driving. Enjoy the ride!")
 
-#1. Wrap the above code in a function called checkDriverAge(). Whenever you call t
+# 1. Wrap the above code in a function called checkDriverAge(). Whenever you call t
 # his function, you will get prompted for age.
 # Notice the benefit in having checkDriverAge() instead of copying and pasting the function everytime?
 
-#2 Instead of using the input(). Now, make the checkDriverAge() function accept an
+# 2 Instead of using the input(). Now, make the checkDriverAge() function accept an
 # argument of age, so that if you enter:
-#checkDriverAge(92);
-#it returns "Powering On. Enjoy the ride!"
-#also make it so that the default age is set to 0 if no argument is given.
+# checkDriverAge(92);
+# it returns "Powering On. Enjoy the ride!"
+# also make it so that the default age is set to 0 if no argument is given.
 
 # def checkDriverAge(age=0):
 #     p=""
@@ -287,25 +286,33 @@
 #
 # checkDriverAge(95)
 
-def highest_even(li):
-    even=[]
-    for item in li:
-        if item%2==0:
-            even.append(item)
-    print (even)
-    j=1
-    highet = even[0]
-    while j<len(even):
+# def highest_even(li):
+#     even=[]
+#     for item in li:
+#         if item%2==0:
+#             even.append(item)
+#     print (even)
+#     j=1
+#     highet = even[0]
+#     while j<len(even):
+#
+#         if even[j]>highet:
+#                highet=even[j]
+#                j+=1
+#
+#         else:
+#
+#             j+=1
+#     return print(highet)
+#
+# highest_even([10,8,5,3,7,2,11,12,14])
 
-        if even[j]>highet:
-               highet=even[j]
-               j+=1
 
-        else:
+class playerCharacter:
+    def __init__(self, name ,age):
+        self.a=name
+        self.b=age
 
-            j+=1
-    return print(highet)
+player1= playerCharacter('Cindy', 20)
 
-highest_even([10,8,5,3,7,2,11,12,14])
-
-
+print(player1.a)
