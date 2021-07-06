@@ -413,21 +413,75 @@
 # #3 Instantiate the Pet class with all your cats use variable my_pets
 #
 # #4 Output all of the cats walking using the my_pets instance
+#
+# class SuperList(list):
+#
+#     def __len__(self):
+#         return 1000
+#
+# super_list=SuperList()
+# print(len(super_list))
 
-class SuperList(list):
 
-    def __len__(self):
-        return 1000
+# def func1(li):
+#     new_list=[]
+#     for item in li:
+#         new_list.append(item*2)
+#
+#     return new_list
+#
+# print(func1([1,2,3,4]))
 
-super_list=SuperList()
-print(len(super_list))
+
+# def func1(item):
+#     return item*2
+#
+# print(list (map(func1, [1,2,3,4])))
+#
+# def func1(item):
+#     return item*2
+#
+# def odd(ii):
+#     return ii % 2== 0
+#
+# print(list (filter(odd, [1,2,3,4])))
 
 
-def func1(li):
-    new_list=[]
-    for item in li:
-        new_list.append(item*2)
 
-    return new_list
+from functools import reduce
 
-print(func1([1,2,3,4]))
+#1 Capitalize all of the pet names and print the list
+my_pets = ['sisi', 'bibi', 'titi', 'carla']
+def capitalize(item):
+    return item.upper()
+
+print(list(map(capitalize,my_pets)))
+
+#2 Zip the 2 lists into a list of tuples, but sort the numbers from lowest to highest.
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [5,4,3,2,1]
+my_numbers.sort()
+
+print (list(zip(my_numbers, my_strings)))
+
+# better to use
+#
+# print(list(zip(my_strings, sorted(my_numbers))))
+#
+# because sorted() doesnt affect the original list
+
+
+#3 Filter the scores that pass over 50%
+scores = [73, 20, 65, 19, 76, 100, 88]
+
+def passed(pp):
+    return pp>50
+
+print(list(filter(passed,scores)))
+
+#4 Combine all of the numbers that are in a list on this file using reduce (my_numbers and scores). What is the total?
+
+def accumulator(acc, item):
+    return acc+item
+
+print(reduce(accumulator, (my_numbers+ scores)))
