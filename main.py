@@ -416,12 +416,18 @@
 
 class SuperList(list):
 
-
-
-
-
-     def __len__(self):
+    def __len__(self):
         return 1000
 
 super_list=SuperList()
 print(len(super_list))
+
+
+def func1(li):
+    new_list=[]
+    for item in li:
+        new_list.append(item*2)
+
+    return new_list
+
+print(func1([1,2,3,4]))
