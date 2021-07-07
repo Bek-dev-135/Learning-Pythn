@@ -496,11 +496,17 @@
 # a.sort(key=lambda x: x[1])
 #
 # print(a)
+#
+# my_list=[num for num in range (0,20)]
+# my_list1=[2*num for num in range (0,20)]
+# my_list2=[2*num for num in range (0,20) if num %2==0]
+#
+# print(my_list)
+# print(my_list1)
+# print(my_list2)
 
-my_list=[num for num in range (0,20)]
-my_list1=[2*num for num in range (0,20)]
-my_list2=[2*num for num in range (0,20) if num %2==0]
+some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
 
-print(my_list)
-print(my_list1)
-print(my_list2)
+
+duplicates={dup for dup in  some_list if some_list.count(dup) >1 }
+print(list(duplicates))
