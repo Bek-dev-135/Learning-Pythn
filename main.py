@@ -490,9 +490,17 @@
 #
 # print(list(map(lambda item: item.upper(), my_pets)))
 
-print(list(map(lambda num: num**2, [1,2,3])))
+# print(list(map(lambda num: num**2, [1,2,3])))
+#
+# a = [(0, 2), (5, 2), (9, 9), (10, -1)]
+# a.sort(key=lambda x: x[1])
+#
+# print(a)
 
-a = [(0, 2), (5, 2), (9, 9), (10, -1)]
-a.sort(key=lambda x: x[1])
+my_list=[num for num in range (0,20)]
+my_list1=[2*num for num in range (0,20)]
+my_list2=[2*num for num in range (0,20) if num %2==0]
 
-print(a)
+print(my_list)
+print(my_list1)
+print(my_list2)
