@@ -512,19 +512,40 @@
 # print(list(duplicates))
 
 #performance decorator.
-from time import time
-def performance(fn):
-  def wrapper(*args, **kwargs):
-    t1 = time()
-    result = fn(*args, **kwargs)
-    t2 = time()
-    print(f'took {t2-t1}')
-    return result
-  return wrapper
+# from time import time
+# def performance(fn):
+#   def wrapper(*args, **kwargs):
+#     t1 = time()
+#     result = fn(*args, **kwargs)
+#     t2 = time()
+#     print(f'took {t2-t1}')
+#     return result
+#   return wrapper
+#
+# @performance
+# def long_time():
+#     for i in range(10000):
+#         i*5
+#
+# long_time()
 
-@performance
-def long_time():
-    for i in range(10000):
-        i*5
+# Create an @authenticated decorator that only allows the function to run if user1 has 'valid' set to True:
+user1 = {
+    'name': 'Sorna',
+    'valid': True #changing this will either run or not run the message_friends function.
+}
 
-long_time()
+def authenticated(fn):
+  # code here
+  def test(x):
+    if bool(x['valid']) == True:
+      fn(x)
+
+  return test
+
+@authenticated
+def message_friends(user):
+    print('message has been sent')
+
+message_friends(user1)
+
