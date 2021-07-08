@@ -505,8 +505,26 @@
 # print(my_list1)
 # print(my_list2)
 
-some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+#
+#
+# duplicates={dup for dup in  some_list if some_list.count(dup) >1 }
+# print(list(duplicates))
 
+#performance decorator.
+from time import time
+def performance(fn):
+  def wrapper(*args, **kwargs):
+    t1 = time()
+    result = fn(*args, **kwargs)
+    t2 = time()
+    print(f'took {t2-t1}')
+    return result
+  return wrapper
 
-duplicates={dup for dup in  some_list if some_list.count(dup) >1 }
-print(list(duplicates))
+@performance
+def long_time():
+    for i in range(10000):
+        i*5
+
+long_time()
