@@ -532,7 +532,7 @@
 # Create an @authenticated decorator that only allows the function to run if user1 has 'valid' set to True:
 user1 = {
     'name': 'Sorna',
-    'valid': True #changing this will either run or not run the message_friends function.
+    'valid': False #changing this will either run or not run the message_friends function.
 }
 
 def authenticated(fn):
