@@ -605,16 +605,24 @@
 # for i in gen:
 #     print(i)
 
-def fib(n):
-    i = 0
-    j = 1
+# def fib(n):
+#     i = 0
+#     j = 1
+#
+#     for f in range(n):
+#         yield i
+#         sum= i+j
+#         i=j
+#         j=sum
+#
+#
+# for x in fib(10):
+#     print(x)
 
-    for f in range(n):
-        yield i
-        sum= i+j
-        i=j
-        j=sum
+#Write a program which will find all such numbers which are divisible by 7 but are
+# not a multiple of 5, between 2000 and 3200 (both included).The numbers obtained
+# should be printed in a comma-separated sequence on a single line.
 
-
-for x in fib(10):
-    print(x)
+for i in range(2000,3201):
+    if i%7== 0 and i%5!=0:
+        print(i,",", end="")
