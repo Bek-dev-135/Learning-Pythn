@@ -678,10 +678,38 @@
 # from console and generate a list and a tuple which contains every number.
 # Suppose the following input is supplied to the program:
 
-lil= [34,67,55,33,12,98]
+# values= input('enter your list of numbers ')
+# lil = values.split(",")
+# my_list=[(num) for num in lil ]
+# my_tuple=((num) for num in lil)
+#
+# print(my_list)
+# print(tuple(my_tuple))
+#
+# Question 5
+# Question:
+#
+#     Define a class which has at least two methods:
+#
+#         getString: to get a string from console input
+#         printString: to print the string in upper case.
+#
+#     Also please include simple test function to test the class methods.
 
-my_list=[str(num) for num in lil ]
-my_tuple=(str(num) for num in lil)
+class Major():
+    def getString(self,stringg):
+        self.stringg= stringg
 
-print(my_list)
-print(tuple(my_tuple))
+    def printString(self):
+        return self.stringg.upper()
+
+    @classmethod
+    def get_user_input(self):
+                stringg = input('Enter first name: ')
+
+                return self(stringg)
+
+
+
+s1= Major.get_user_input()
+s1.printString()
