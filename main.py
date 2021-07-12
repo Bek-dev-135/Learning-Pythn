@@ -647,22 +647,41 @@
 # and then the program should print the dictionary.Suppose the following input is
 # supplied to the program: 8 Then, the output should be:
 #{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+#
+# num= int(input("enter a number: "))
+# my_list=[]
+# my_squeares=[]
+# for i in range (1,num+1):
+#     my_list.append(i)
+#     my_squeares.append(i*i)
+#
+# print ("Original key list is : " + str(my_list))
+# print ("Original value list is : " + str(my_squeares))
+#
+# my_dict= {}
+# for key in my_list:
+#     for value in my_squeares:
+#         my_dict[key] = value
+#         my_squeares.remove(value)
+#         break
+#
+# print ("Resultant dictionary is : " +  str(my_dict))
 
-num= int(input("enter a number: "))
-my_list=[]
-my_squeares=[]
-for i in range (1,num+1):
-    my_list.append(i)
-    my_squeares.append(i*i)
 
-print ("Original key list is : " + str(my_list))
-print ("Original value list is : " + str(my_squeares))
 
-my_dict= {}
-for key in my_list:
-    for value in my_squeares:
-        my_dict[key] = value
-        my_squeares.remove(value)
-        break
 
-print ("Resultant dictionary is : " +  str(my_dict))
+
+
+# Question:
+#
+#     Write a program which accepts a sequence of comma-separated numbers
+# from console and generate a list and a tuple which contains every number.
+# Suppose the following input is supplied to the program:
+
+lil= [34,67,55,33,12,98]
+
+my_list=[str(num) for num in lil ]
+my_tuple=(str(num) for num in lil)
+
+print(my_list)
+print(tuple(my_tuple))
