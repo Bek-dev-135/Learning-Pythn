@@ -648,7 +648,7 @@
 # supplied to the program: 8 Then, the output should be:
 #{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
-num= 8
+num= int(input("enter a number: "))
 my_list=[]
 my_squeares=[]
 for i in range (1,num+1):
