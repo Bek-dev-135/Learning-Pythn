@@ -649,6 +649,20 @@
 #{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 
 num= 8
-my_dict=dict({})
-for i in num:
-    my_dict.update(i:i*i)
+my_list=[]
+my_squeares=[]
+for i in range (1,num+1):
+    my_list.append(i)
+    my_squeares.append(i*i)
+
+print ("Original key list is : " + str(my_list))
+print ("Original value list is : " + str(my_squeares))
+
+my_dict= {}
+for key in my_list:
+    for value in my_squeares:
+        my_dict[key] = value
+        my_squeares.remove(value)
+        break
+
+print ("Resultant dictionary is : " +  str(my_dict))
