@@ -696,20 +696,15 @@
 #
 #     Also please include simple test function to test the class methods.
 
-class Major():
+class Major:
     def getString(self,stringg):
         self.stringg= stringg
 
     def printString(self):
-        return self.stringg.upper()
-
-    @classmethod
-    def get_user_input(self):
-                stringg = input('Enter first name: ')
-
-                return self(stringg)
+       print (self.stringg.upper())
 
 
 
-s1= Major.get_user_input()
+s1= Major()
+s1.getString(str(input('enter a string: ')))
 s1.printString()
