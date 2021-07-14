@@ -752,20 +752,38 @@
 # [[0, 0, 0, 0, 0],
 #  [0, 1, 2, 3, 4],
 #  [0, 2, 4, 6, 8]]
-inn=input('input a number: ').split(',')
-i=int(inn[0])
-j=int(inn[1])
-list=[]
+# inn=input('input a number: ').split(',')
+# i=int(inn[0])
+# j=int(inn[1])
+# list=[]
+#
+# for item in range(0,i):
+#     sub_list = []
+#     for tem in range(0,j):
+#         sub_list.append(item*tem)
+#     list.append(sub_list)
+#
+#
+# print(list)
 
-for item in range(0,i):
-    sub_list = []
-    for tem in range(0,j):
-        sub_list.append(item*tem)
-    list.append(sub_list)
+import sys
 
-print(list)
+sys.argv
 
+import random
+def guessing_game(numi):
+    num=random.randint(1,2)
+    print(num)
 
+    i=(numi)
+    b=True
+    while b:
+        if i==num:
+            print('you genius')
+            b=False
+        else:
+            print('try again')
+            b = False
+    return
 
-
-
+guessing_game(1)
