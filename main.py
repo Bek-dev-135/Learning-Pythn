@@ -752,6 +752,7 @@
 # [[0, 0, 0, 0, 0],
 #  [0, 1, 2, 3, 4],
 #  [0, 2, 4, 6, 8]]
+
 # inn=input('input a number: ').split(',')
 # i=int(inn[0])
 # j=int(inn[1])
@@ -766,24 +767,25 @@
 #
 # print(list)
 
-import sys
+# import sys
+#
+# sys.argv
 
-sys.argv
+# Question 8
+# Question:
+#
+#     Write a program that accepts a comma separated sequence of words as
+# input and prints the words in a comma-separated sequence after sorting them alphabetically.
+#
+#     Suppose the following input is supplied to the program:
+#
+# without,hello,bag,world
+#
+#     Then, the output should be:
+#
+# bag,hello,without,world
 
-import random
-def guessing_game(numi):
-    num=random.randint(1,2)
-    print(num)
-
-    i=(numi)
-    b=True
-    while b:
-        if i==num:
-            print('you genius')
-            b=False
-        else:
-            print('try again')
-            b = False
-    return
-
-guessing_game(1)
+to_sort= 'without,hello,bag,world'.split(',')
+to_sort.sort()
+for i in    to_sort:
+    print(i,end=', ')
