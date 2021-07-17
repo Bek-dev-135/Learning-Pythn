@@ -793,8 +793,8 @@
 # Question 9
 # Question:
 #
-#     Write a program that accepts sequence of lines as input and p
-# rints the lines after making all characters in the sentence capitalized.
+#     Write a program that accepts sequence of lines as input and
+# prints the lines after making all characters in the sentence capitalized.
 #
 #     Suppose the following input is supplied to the program:
 #
@@ -805,3 +805,14 @@
 #
 # HELLO WORLD
 # PRACTICE MAKES PERFECT
+
+line=""
+
+while True:
+    new_line=(str(input('GIVE ME SOME ')))
+    if new_line:
+        line+=new_line.upper()+'\n'
+    else:
+        break
+
+print(line)
