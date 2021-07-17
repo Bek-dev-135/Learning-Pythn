@@ -785,7 +785,23 @@
 #
 # bag,hello,without,world
 
-to_sort= 'without,hello,bag,world'.split(',')
-to_sort.sort()
-for i in    to_sort:
-    print(i,end=', ')
+# to_sort= 'without,hello,bag,world'.split(',')
+# to_sort.sort()
+# for i in    to_sort:
+#     print(i,end=', ')
+#
+# Question 9
+# Question:
+#
+#     Write a program that accepts sequence of lines as input and p
+# rints the lines after making all characters in the sentence capitalized.
+#
+#     Suppose the following input is supplied to the program:
+#
+# Hello world
+# Practice makes perfect
+#
+#     Then, the output should be:
+#
+# HELLO WORLD
+# PRACTICE MAKES PERFECT
