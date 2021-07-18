@@ -805,14 +805,34 @@
 #
 # HELLO WORLD
 # PRACTICE MAKES PERFECT
+#
+# line=""
+#
+# while True:
+#     new_line=(str(input('GIVE ME SOME ')))
+#     if new_line:
+#         line+=new_line.upper()+'\n'
+#     else:
+#         break
+#
+# print(line)
+#
+#
+# Question 10
+# Question
+#
+#     Write a program that accepts a sequence of whitespace separated
+#  words as input and prints the words after removing all duplicate words
+# and sorting them alphanumerically.
+#
+#     Suppose the following input is supplied to the program:
+#
+# hello world and practice makes perfect and hello world again
+#
+#     Then, the output should be:
+#
+# again and hello makes perfect practice world
 
-line=""
-
-while True:
-    new_line=(str(input('GIVE ME SOME ')))
-    if new_line:
-        line+=new_line.upper()+'\n'
-    else:
-        break
-
-print(line)
+my_list=list(set('hello world and practice makes perfect and hello world again'.split(' ')))
+my_list.sort()
+print(' '.join(my_list))
