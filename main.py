@@ -832,7 +832,17 @@
 #     Then, the output should be:
 #
 # again and hello makes perfect practice world
+#
+# my_list=list(set('hello world and practice makes perfect and hello world again'.split(' ')))
+# my_list.sort()
+# print(' '.join(my_list))
 
-my_list=list(set('hello world and practice makes perfect and hello world again'.split(' ')))
-my_list.sort()
-print(' '.join(my_list))
+
+word = input().split()
+
+for i in word:
+    if word.count(i) > 1:    #count function returns total repeatation of an element that is send as argument
+        word.remove(i)     # removes exactly one element per call
+
+word.sort()
+print(" ".join(word))
