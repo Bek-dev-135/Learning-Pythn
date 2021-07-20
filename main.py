@@ -838,19 +838,29 @@
 # print(' '.join(my_list))
 
 
-word = input().split()
+# word = input().split()
+#
+# for i in word:
+#     if word.count(i) > 1:    #count function returns total repeatation of an element that is send as argument
+#         word.remove(i)     # removes exactly one element per call
+#
+# word.sort()
+# print(" ".join(word))
 
-for i in word:
-    if word.count(i) > 1:    #count function returns total repeatation of an element that is send as argument
-        word.remove(i)     # removes exactly one element per call
-
-word.sort()
-print(" ".join(word))
-
-
-inp_string = input("Enter string: ").split()
-out_string = []
-for words in inp_string:
-    if words not in out_string:
-        out_string.append(words)
-print(" ".join(sorted(out_string)))
+#
+# Question 11
+# Question
+#
+#     Write a program which accepts a sequence of comma separated 4 digit
+# binary numbers as its input and then check whether they are divisible by 5 or not.
+# The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+#
+#     Example:
+#
+# 0100,0011,1010,1001
+#
+#     Then the output should be:
+#
+# 1010
+#
+#     Notes: Assume the data is input by console.
