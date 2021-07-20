@@ -846,3 +846,11 @@ for i in word:
 
 word.sort()
 print(" ".join(word))
+
+
+inp_string = input("Enter string: ").split()
+out_string = []
+for words in inp_string:
+    if words not in out_string:
+        out_string.append(words)
+print(" ".join(sorted(out_string)))
