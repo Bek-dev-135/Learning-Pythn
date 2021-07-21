@@ -864,3 +864,19 @@
 # 1010
 #
 #     Notes: Assume the data is input by console.
+
+innn=input('Input a list of binaries:' ).split(',')
+new_list=[]
+for item in innn:
+    if int(item , 2) %5==0:
+        new_list.append(item)
+    else:
+        pass
+
+for item in new_list:
+    print(item)
+
+
+
+
+
