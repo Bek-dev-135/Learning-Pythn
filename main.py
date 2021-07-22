@@ -865,18 +865,60 @@
 #
 #     Notes: Assume the data is input by console.
 
-innn=input('Input a list of binaries:' ).split(',')
-new_list=[]
-for item in innn:
-    if int(item , 2) %5==0:
-        new_list.append(item)
-    else:
-        pass
+# innn=input('Input a list of binaries:' ).split(',')
+# new_list=[]
+# for item in innn:
+#     if int(item , 2) %5==0:
+#         new_list.append(item)
+#     else:
+#         pass
+#
+# for item in new_list:
+#     print(item)
 
-for item in new_list:
-    print(item)
+# Question 12
+# Question:
+#
+#     Write a program, which will find all such numbers between 1000 and
+# 3000 (both included) such that each digit of the number is an even number.The numbers
+# obtained should be printed in a comma-separated sequence on a single line.
+#
+# Hints:
+#
+#     In case of input data being supplied to the question, it should be assumed to be a console input.
+#
 
 
+list = []
+for numbers in range(1000,3001):
+    j = 0
+    i = 0
 
+
+    string_form = str(numbers)
+
+    while j<4:
+
+        if (int(string_form[j]) %2==0):
+            i+=1
+        else:
+            pass
+        j+=1
+
+    if i==4:
+        list.append(str(numbers))
+
+print(','.join(list))
+
+
+# number=input('give me a number: ').split(',')
+# list=[]
+# for item in number:
+#     if number.count(item)==1:
+#         list.append(item)
+#
+#
+# print(','.join(list))
+#
 
 
