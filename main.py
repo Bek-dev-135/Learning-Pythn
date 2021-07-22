@@ -889,26 +889,26 @@
 #
 
 
-list = []
-for numbers in range(1000,3001):
-    j = 0
-    i = 0
-
-
-    string_form = str(numbers)
-
-    while j<4:
-
-        if (int(string_form[j]) %2==0):
-            i+=1
-        else:
-            pass
-        j+=1
-
-    if i==4:
-        list.append(str(numbers))
-
-print(','.join(list))
+# list = []
+# for numbers in range(1000,3001):
+#     j = 0
+#     i = 0
+#
+#
+#     string_form = str(numbers)
+#
+#     while j<4:
+#
+#         if (int(string_form[j]) %2==0):
+#             i+=1
+#         else:
+#             pass
+#         j+=1
+#
+#     if i==4:
+#         list.append(str(numbers))
+#
+# print(','.join(list))
 
 
 # number=input('give me a number: ').split(',')
@@ -922,3 +922,30 @@ print(','.join(list))
 #
 
 
+def hasArrayTwoCandidates(A, arr_size, sum):
+
+    new_list=sorted(A)
+    l = 0
+    r = arr_size - 1
+    list=[]
+
+    while l < r:
+        if (new_list[l] + new_list[r] == sum):
+            list.append(new_list[l])
+            list.append(new_list[r])
+            return 1
+        elif (new_list[l] + new_list[r] < sum):
+            l += 1
+        else:
+            r -= 1
+    return 0
+
+
+
+A = [1, 4, 45, 6, 10, -8]
+n = 16
+if (hasArrayTwoCandidates(A, len(A), n)):
+    print("Array has two elements with the given sum")
+
+else:
+    print("Array doesn't have two elements with the given sum")
