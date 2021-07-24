@@ -323,9 +323,7 @@
 # 1 Instantiate the Cat object with 3 cats
 
 
-
 # 2 Create a function that finds the oldest cat
-
 
 
 # 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
@@ -447,7 +445,6 @@
 # print(list (filter(odd, [1,2,3,4])))
 
 
-
 # from functools import reduce
 #
 # #1 Capitalize all of the pet names and print the list
@@ -511,7 +508,7 @@
 # duplicates={dup for dup in  some_list if some_list.count(dup) >1 }
 # print(list(duplicates))
 
-#performance decorator.
+# performance decorator.
 # from time import time
 # def performance(fn):
 #   def wrapper(*args, **kwargs):
@@ -629,7 +626,7 @@
 #
 
 
-#Write a program which can compute the factorial of a given numbers.The results
+# Write a program which can compute the factorial of a given numbers.The results
 # should be printed in a comma-separated sequence on a single line.Suppose the
 # following input is supplied to the program: 8 Then, the output should be:40320
 #
@@ -642,11 +639,11 @@
 #
 # print(f'{start} Then, the output should be: {factorial}')
 
-#With a given integral number n, write a program to generate a dictionary that
+# With a given integral number n, write a program to generate a dictionary that
 # contains (i, i x i) such that is an integral number between 1 and n (both included).
 # and then the program should print the dictionary.Suppose the following input is
 # supplied to the program: 8 Then, the output should be:
-#{1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
+# {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64}
 #
 # num= int(input("enter a number: "))
 # my_list=[]
@@ -666,10 +663,6 @@
 #         break
 #
 # print ("Resultant dictionary is : " +  str(my_dict))
-
-
-
-
 
 
 # Question:
@@ -708,7 +701,6 @@
 # s1= Major()
 # s1.getString(str(input('enter a string: ')))
 # s1.printString()
-
 
 
 #     Write a program that calculates and prints the value according to the given formula:
@@ -922,30 +914,51 @@
 #
 
 
-def hasArrayTwoCandidates(A, arr_size, sum):
+# def hasArrayTwoCandidates(A, arr_size, sum):
+#
+#     new_list=sorted(A)
+#     l = 0
+#     r = arr_size - 1
+#     list=[]
+#
+#     while l < r:
+#         if (new_list[l] + new_list[r] == sum):
+#             list.append(new_list[l])
+#             list.append(new_list[r])
+#             return 1
+#         elif (new_list[l] + new_list[r] < sum):
+#             l += 1
+#         else:
+#             r -= 1
+#     return 0
+#
+#
+#
+# A = [1, 4, 45, 6, 10, -8]
+# n = 16
+# if (hasArrayTwoCandidates(A, len(A), n)):
+#     print("Array has two elements with the given sum")
+#
+# else:
+#     print("Array doesn't have two elements with the given sum")
 
-    new_list=sorted(A)
-    l = 0
-    r = arr_size - 1
-    list=[]
+def PairedN(arr, arr_size, sum):
+    s = set()
 
-    while l < r:
-        if (new_list[l] + new_list[r] == sum):
-            list.append(new_list[l])
-            list.append(new_list[r])
-            return 1
-        elif (new_list[l] + new_list[r] < sum):
-            l += 1
-        else:
-            r -= 1
-    return 0
+    for i in range(0, arr_size):
+        temp = sum - arr[i]
+        if (temp in s):
+            x = arr.index(temp)
+            y = arr.index(arr[i])
+            if x + y == sum:
+                print(f"Pair with given sum {str(sum)} is ({str(arr[i])} at index {y} , {str(temp)}  at index {x})")
+        s.add(arr[i])
 
 
+A = [1, 6, 45, 4, 3, 8]
+n = 7
+PairedN(A, len(A), n)
 
-A = [1, 4, 45, 6, 10, -8]
-n = 16
-if (hasArrayTwoCandidates(A, len(A), n)):
-    print("Array has two elements with the given sum")
-
-else:
-    print("Array doesn't have two elements with the given sum")
+#adaa
+class thi:
+    pass
