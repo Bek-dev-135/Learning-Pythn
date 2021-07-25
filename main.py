@@ -1003,9 +1003,14 @@
 # print(f"LETTERS {letter}\n{digits}") # two different types of formating method is shown in both solution
 
 
-f= open('test.txt', 'a')
-f.write('This is my new text file')
-f.close()
+# f= open('test.txt', 'a')
+# f.write('This is my new text file')
+# f.close()
+#
+# f= open('test.txt', 'r')
+# print(f.read())
 
-f= open('test.txt', 'r')
-print(f.read())
+import os
+
+if os.path.exists ('test.txt'):
+    os.remove('test.txt')
