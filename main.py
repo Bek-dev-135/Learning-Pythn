@@ -992,12 +992,20 @@
 # print(f'letters {letters}')
 # print(f'numbers {nums}')
 
-word = input()
-letter, digit = 0,0
+# word = input()
+# letter, digit = 0,0
+#
+# for i in word:
+#     if i.isalpha(): # returns True if alphabet
+#         letter += 1
+#     elif i.isnumeric(): # returns True if numeric
+#         digit += 1
+# print(f"LETTERS {letter}\n{digits}") # two different types of formating method is shown in both solution
 
-for i in word:
-    if i.isalpha(): # returns True if alphabet
-        letter += 1
-    elif i.isnumeric(): # returns True if numeric
-        digit += 1
-print(f"LETTERS {letter}\n{digits}") # two different types of formating method is shown in both solution
+
+f= open('test.txt', 'a')
+f.write('This is my new text file')
+f.close()
+
+f= open('test.txt', 'r')
+print(f.read())
