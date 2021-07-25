@@ -941,24 +941,53 @@
 #
 # else:
 #     print("Array doesn't have two elements with the given sum")
+#
+# def PairedN(arr, arr_size, sum):
+#     s = set()
+#
+#     for i in range(0, arr_size):
+#         temp = sum - arr[i]
+#         if (temp in s):
+#             x = arr.index(temp)
+#             y = arr.index(arr[i])
+#             if x + y == sum:
+#                 print(f"Pair with given sum {str(sum)} is ({str(arr[i])} at index {y} , {str(temp)}  at index {x})")
+#         s.add(arr[i])
+#
+#
+# A = [1, 6, 45, 4, 3, 8]
+# n = 7
+# PairedN(A, len(A), n)
 
-def PairedN(arr, arr_size, sum):
-    s = set()
 
-    for i in range(0, arr_size):
-        temp = sum - arr[i]
-        if (temp in s):
-            x = arr.index(temp)
-            y = arr.index(arr[i])
-            if x + y == sum:
-                print(f"Pair with given sum {str(sum)} is ({str(arr[i])} at index {y} , {str(temp)}  at index {x})")
-        s.add(arr[i])
+# Question 13
+# Question:
+#
+#     Write a program that accepts a sentence and calculate the number of letters and digits.
+#
+#     Suppose the following input is supplied to the program:
+#
+# hello world! 123
+#
+#     Then, the output should be:
+#
+# LETTERS 10
+# DIGITS 3
 
 
-A = [1, 6, 45, 4, 3, 8]
-n = 7
-PairedN(A, len(A), n)
 
-#adaa
-class thi:
-    pass
+#lst = [str(i) for i in input('give me a str: ')]
+lst = [str(i) for i in 'hello world! 123']
+letters=0
+nums=0
+for i in lst:
+    if ord(i) in range(48,58):
+        nums+=1
+    elif ord(i) in range  (65,91):
+        letters += 1
+    elif ord(i) in range (97, 123):
+            letters+=1
+    else:
+        print('input a right character')
+print(f'letters {letters}')
+print(f'numbers {nums}')
