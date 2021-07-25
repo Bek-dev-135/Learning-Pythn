@@ -975,19 +975,29 @@
 # DIGITS 3
 
 
+#
+# lst = [str(i) for i in input('give me a str: ')]
+#
+# letters=0
+# nums=0
+# for i in lst:
+#     if ord(i) in range(48,58):
+#         nums+=1
+#     elif ord(i) in range  (65,91):
+#         letters += 1
+#     elif ord(i) in range (97, 123):
+#             letters+=1
+#     else:
+#         print('input a right character')
+# print(f'letters {letters}')
+# print(f'numbers {nums}')
 
-#lst = [str(i) for i in input('give me a str: ')]
-lst = [str(i) for i in 'hello world! 123']
-letters=0
-nums=0
-for i in lst:
-    if ord(i) in range(48,58):
-        nums+=1
-    elif ord(i) in range  (65,91):
-        letters += 1
-    elif ord(i) in range (97, 123):
-            letters+=1
-    else:
-        print('input a right character')
-print(f'letters {letters}')
-print(f'numbers {nums}')
+word = input()
+letter, digit = 0,0
+
+for i in word:
+    if i.isalpha(): # returns True if alphabet
+        letter += 1
+    elif i.isnumeric(): # returns True if numeric
+        digit += 1
+print(f"LETTERS {letter}\n{digits}") # two different types of formating method is shown in both solution
