@@ -1010,7 +1010,15 @@
 # f= open('test.txt', 'r')
 # print(f.read())
 
-import os
-
-if os.path.exists ('test.txt'):
-    os.remove('test.txt')
+# import os
+#
+# if os.path.exists ('test.txt'):
+#     os.remove('test.txt')
+with open('test.txt','w') as f:
+    f.write('my name is simpson')
+from translate import Translator
+translator= Translator(to_lang="zh")
+with open('test.txt','r') as f:
+    text=f.read()
+    translation = translator.translate(text)
+    print (translation)
