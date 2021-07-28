@@ -1027,23 +1027,32 @@
 #     print (translation)
 
 
+# import re
+#
+#
+# string= 'the apple tcame from this tree'
+#
+# a=re.search('this', string)
+#
+# print(a)
+# print(a.span())
+# print(a.start())
+# print(a.end())
+#
+# pattern=re.compile(r'([a-zA-Z]).([a])')
+# string='the apple came from this tree this'
+# a=pattern.search(string)
+# b=pattern.findall(string)
+# c=pattern.fullmatch(string)
+#
+# print(a,b,c,a.group())
+
+
 import re
 
+pattern=re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+string='gawakgwak200@hotmail.com'
+a=pattern.search(string)
 
-string= 'the apple came from this tree'
-
-a=re.search('this', string)
 
 print(a)
-print(a.span())
-print(a.start())
-print(a.end())
-
-pattern=re.compile('this')
-string='the apple came from this tree this'
-a=pattern.search(string)
-b=pattern.findall(string)
-c=pattern.fullmatch(string)
-
-print(a,b,c)
-
