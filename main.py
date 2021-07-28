@@ -1038,3 +1038,12 @@ print(a)
 print(a.span())
 print(a.start())
 print(a.end())
+
+pattern=re.compile('this')
+string='the apple came from this tree this'
+a=pattern.search(string)
+b=pattern.findall(string)
+c=pattern.fullmatch(string)
+
+print(a,b,c)
+
