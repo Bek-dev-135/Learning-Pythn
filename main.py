@@ -1048,11 +1048,30 @@
 # print(a,b,c,a.group())
 
 
-import re
+#
+# import re
+#
+# pattern=re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
+# string='gawakgwak200@hotmail.com'
+# a=pattern.search(string)
+#
+#
+# print(a)
 
-pattern=re.compile(r"(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)")
-string='gawakgwak200@hotmail.com'
-a=pattern.search(string)
+#
+# # password with any amoundt of cahracters starting from 8
+# # must contain $@%#
+# # ends with a number
+# import re
+#
+#
+# pattern=re.compile(r"[a-zA-z@$%#]{8,}\d")
+# string='gawakgwak2'
+# a=pattern.search(string)
+# check=pattern.fullmatch(string)
+#
+# print(check)
 
 
-print(a)
+def uuuu:
+    fhgggngn=[]
