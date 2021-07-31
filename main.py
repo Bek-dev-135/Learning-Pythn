@@ -1072,13 +1072,17 @@
 #
 # print(check)
 
+#
+# from turtle import *
+# color('green')
+# bgcolor('black')
+# speed(12)
+# b=0
+# while b<200:
+#     left(b)
+#     forward(b*3)
+#     b+=1
 
-from turtle import *
-color('green')
-bgcolor('black')
-speed(12)
-b=0
-while b<200:
-    left(b)
-    forward(b*3)
-    b+=1
+def addin(num):
+    num+=5
+    return num
