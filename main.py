@@ -1073,5 +1073,12 @@
 # print(check)
 
 
-def uuuu:
-    fhgggngn=[]
+from turtle import *
+color('green')
+bgcolor('black')
+speed(12)
+b=0
+while b<200:
+    left(b)
+    forward(b*3)
+    b+=1
