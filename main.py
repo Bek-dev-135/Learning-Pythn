@@ -1083,6 +1083,17 @@
 #     forward(b*3)
 #     b+=1
 
-def addin(num):
-    num+=5
-    return num
+# def addin(num):
+#     num+=5
+#     return num
+
+
+string=(str(i) for i  in input('input a bunch of words: '))
+ucase,lcase=0,0
+for i in string:
+    if ord(i) in range(65,91):
+        ucase+=1
+    if ord(i) in range(97, 123):
+        lcase+=1
+
+print(f'uppercase: {ucase}, lowercase {lcase}')
