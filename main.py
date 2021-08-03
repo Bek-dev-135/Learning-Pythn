@@ -1059,7 +1059,7 @@
 # print(a)
 
 #
-# # password with any amoundt of cahracters starting from 8
+# # password with any amount of cahracters starting from 8
 # # must contain $@%#
 # # ends with a number
 # import re
@@ -1076,7 +1076,7 @@
 # from turtle import *
 # color('green')
 # bgcolor('black')
-# speed(12)
+# speed(10)
 # b=0
 # while b<200:
 #     left(b)
@@ -1088,12 +1088,23 @@
 #     return num
 
 
-string=(str(i) for i  in input('input a bunch of words: '))
-ucase,lcase=0,0
-for i in string:
-    if ord(i) in range(65,91):
-        ucase+=1
-    if ord(i) in range(97, 123):
-        lcase+=1
+# string=(str(i) for i  in input('input a bunch of words: '))
+# ucase,lcase=0,0
+# for i in string:
+#     if ord(i) in range(65,91):
+#         ucase+=1
+#     if ord(i) in range(97, 123):
+#         lcase+=1
+#
+# print(f'uppercase: {ucase}, lowercase {lcase}')
 
-print(f'uppercase: {ucase}, lowercase {lcase}')
+word = input()
+upper,lower = 0,0
+
+for i in word:
+    if 'a'<=i and i<='z' :
+        lower+=1
+    if 'A'<=i and i<='Z':
+        upper+=1
+
+print("UPPER CASE {0}\nLOWER CASE {1}".format(upper,lower))
