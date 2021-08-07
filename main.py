@@ -1109,11 +1109,35 @@
 #
 # print("UPPER CASE {0}\nLOWER CASE {1}".format(upper,lower))
 
-word = input()
-upper,lower = 0,0
+# word = input()
+# upper,lower = 0,0
+#
+# for i in word:
+#         lower+=i.islower()
+#         upper+=i.isupper()
+#
+# print("UPPER CASE {0}\nLOWER CASE {1}".format(upper,lower))
 
-for i in word:
-        lower+=i.islower()
-        upper+=i.isupper()
 
-print("UPPER CASE {0}\nLOWER CASE {1}".format(upper,lower))
+
+# Question 15
+# Question:
+#
+#     Write a program that computes the value of a+aa+aaa+aaaa with a given digit as the value of a.
+#
+#     Suppose the following input is supplied to the program:
+#
+# 9
+#
+#     Then, the output should be:
+#
+# 11106
+a=input('give me a number ')
+mlist=0
+stri=a
+
+for i in range(0,4):
+        mlist+=(int(stri))
+        stri+=a
+
+print(mlist)
