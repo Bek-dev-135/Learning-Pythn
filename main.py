@@ -1156,9 +1156,61 @@
 # 1,9,25,49,81
 
 
+# mt_list=[int(i) for i in input('list: ').split(',')]
+#
+# mylist1=[i*i for i in mt_list if  (i%2!=0)]
+#
+# print(mylist1)
 
-mt_list=[int(i) for i in input('list: ').split(',')]
+# Question 17
+# Question:
+#
+#     Write a program that computes the net amount of a bank account based
+# a transaction log from console input. The transaction log format is shown as following:
+#
+# D 100
+# W 200
+#
+#     D means deposit while W means withdrawal.
+#
+#     Suppose the following input is supplied to the program:
+#
+# D 300
+# D 300
+# W 200
+# D 100
+#
+#     Then, the output should be:
+#
+# 500
 
-mylist1=[i*i for i in mt_list if  (i%2!=0)]
+#
+# import random
+#
+# def ranndomize(guess,answer):
+#
+#         if guess==answer:
+#                 print('you are a genius')
+#                 return True
+#         else:
+#                 print('wrong')
+# if __name__ == '__main__':
+#         answer=random.randint(1,2)
+#         guess=int(input('sdbdsd: '))
+#
+#         ranndomize(guess,answer)
 
-print(mylist1)
+
+
+from PIL import Image
+
+img =  Image.open('./pikachu.jpg')
+
+print(img.mode)
+
+
+from PIL import Image, ImageFilter
+
+img =  Image.open('./pikachu.jpg')
+filtered_image=img.filter(ImageFilter.BLUR)
+filtered_image.save('blur.png', "png")
