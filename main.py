@@ -1202,15 +1202,23 @@
 
 
 
-from PIL import Image
+# from PIL import Image,ImageFilter
+#
+# img =  Image.open('./astro.jpg')
+# img.thumbnail((400,200))
+# img.save('thumbnail.jpg')
 
-img =  Image.open('./pikachu.jpg')
 
-print(img.mode)
+import PyPDF2
+
+with open('dummy.pdf', 'rb') as file:
+    reader=PyPDF2.PdfFileReader(file)
+    print(reader.numPages)
 
 
-from PIL import Image, ImageFilter
+import PyPDF2
 
-img =  Image.open('./pikachu.jpg')
-filtered_image=img.filter(ImageFilter.BLUR)
-filtered_image.save('blur.png', "png")
+with open('dummy.pdf', 'rb') as file:
+    reader=PyPDF2.PdfFileReader(file)
+    print(reader.numPages)
+
