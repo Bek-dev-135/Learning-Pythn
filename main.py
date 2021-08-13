@@ -1215,16 +1215,50 @@
 #     reader=PyPDF2.PdfFileReader(file)
 #     print(reader.numPages)
 
+#
+# import PyPDF2
+#
+# with open('dummy.pdf', 'rb') as file:
+#     reader=PyPDF2.PdfFileReader(file)
+#     page=reader.getPage(0)
+#
+#     print(page.rotateCounterClockwise(90))
+#     writer=PyPDF2.PdfFileWriter()
+#     writer.addPage(page)
+#     with open('tilt.pdf', 'wb') as newfile:
+#         writer.write(newfile)
+
+# import sys
+# import os
+# import PyPDF2
+#
+#
+# inputs= sys.argv[1:4]
+#
+# def pdf_combiner(pdf_list):
+#     merger=PyPDF2.PdfFileMerger()
+#     for pdf in pdf_list:
+#         print(pdf)
+#         merger.append(pdf)
+#     merger.write('supe.pdf')
+#
+# pdf_combiner(inputs)
+
 
 import PyPDF2
 
-with open('dummy.pdf', 'rb') as file:
-    reader=PyPDF2.PdfFileReader(file)
-    page=reader.getPage(0)
+wattamark=PyPDF2.PdfFileReader(open('wtr.pdf', 'rb'))
+superr=PyPDF2.PdfFileReader(open('supe.pdf','rb'))
+writer=PyPDF2.PdfFileWriter()
+water_page=wattamark.getPage(0)
+n=superr.getNumPages()
+for i in range (0,n):
+            pdf_page=superr.getPage(i)
+            pdf_page.mergePage(water_page)
 
-    print(page.rotateCounterClockwise(90))
-    writer=PyPDF2.PdfFileWriter()
-    writer.addPage(page)
-    with open('tilt.pdf', 'wb') as newfile:
-        writer.write(newfile)
+            writer.addPage(pdf_page)
+
+merged_file = open('drafted.pdf', 'wb')
+writer.write(merged_file)
+
 
