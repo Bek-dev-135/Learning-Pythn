@@ -1244,21 +1244,42 @@
 #
 # pdf_combiner(inputs)
 
+#
+# import PyPDF2
+#
+# wattamark=PyPDF2.PdfFileReader(open('wtr.pdf', 'rb'))
+# superr=PyPDF2.PdfFileReader(open('supe.pdf','rb'))
+# writer=PyPDF2.PdfFileWriter()
+# water_page=wattamark.getPage(0)
+# n=superr.getNumPages()
+# for i in range (0,n):
+#             pdf_page=superr.getPage(i)
+#             pdf_page.mergePage(water_page)
+#
+#             writer.addPage(pdf_page)
+#
+# merged_file = open('drafted.pdf', 'wb')
+# writer.write(merged_file)
 
-import PyPDF2
 
-wattamark=PyPDF2.PdfFileReader(open('wtr.pdf', 'rb'))
-superr=PyPDF2.PdfFileReader(open('supe.pdf','rb'))
-writer=PyPDF2.PdfFileWriter()
-water_page=wattamark.getPage(0)
-n=superr.getNumPages()
-for i in range (0,n):
-            pdf_page=superr.getPage(i)
-            pdf_page.mergePage(water_page)
+import smtplib
+from string import Template
+from pathlib import Path
 
-            writer.addPage(pdf_page)
+from email.message import EmailMessage
 
-merged_file = open('drafted.pdf', 'wb')
-writer.write(merged_file)
+html=Template(Path('index.html').read_text())
+email= EmailMessage()
 
+email['from']= 'Bereketeab Abebe'
+email['to']='bekiw1127@gmail.com'
+email['subject']='you have won a million dollar!'
 
+email.set_content(html.substitute({'name': 'tintin'}), 'html')
+
+with smtplib.SMTP(host='smtp.gmail.com' , port=587) as smtp:
+    smtp.ehlo()
+    smtp.starttls()
+    smtp.login('bekwab19@gmail.com','Bek@wab19$$')
+    smtp.send_message(email)
+    print('all good')
