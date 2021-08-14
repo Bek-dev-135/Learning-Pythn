@@ -1162,27 +1162,6 @@
 #
 # print(mylist1)
 
-# Question 17
-# Question:
-#
-#     Write a program that computes the net amount of a bank account based
-# a transaction log from console input. The transaction log format is shown as following:
-#
-# D 100
-# W 200
-#
-#     D means deposit while W means withdrawal.
-#
-#     Suppose the following input is supplied to the program:
-#
-# D 300
-# D 300
-# W 200
-# D 100
-#
-#     Then, the output should be:
-#
-# 500
 
 #
 # import random
@@ -1261,25 +1240,72 @@
 # merged_file = open('drafted.pdf', 'wb')
 # writer.write(merged_file)
 
+#
+# import smtplib
+# from string import Template
+# from pathlib import Path
+#
+# from email.message import EmailMessage
+#
+# html=Template(Path('index.html').read_text())
+# email= EmailMessage()
+#
+# email['from']= 'Bereketeab Abebe'
+# email['to']='bekiw1127@gmail.com'
+# email['subject']='you have won a million dollar!'
+#
+# email.set_content(html.substitute({'name': 'tintin'}), 'html')
+#
+# with smtplib.SMTP(host='smtp.gmail.com' , port=587) as smtp:
+#     smtp.ehlo()
+#     smtp.starttls()
+#     smtp.login('bekwab19@gmail.com','Bek@wab19$$')
+#     smtp.send_message(email)
+#     print('all good')
 
-import smtplib
-from string import Template
-from pathlib import Path
 
-from email.message import EmailMessage
 
-html=Template(Path('index.html').read_text())
-email= EmailMessage()
 
-email['from']= 'Bereketeab Abebe'
-email['to']='bekiw1127@gmail.com'
-email['subject']='you have won a million dollar!'
 
-email.set_content(html.substitute({'name': 'tintin'}), 'html')
 
-with smtplib.SMTP(host='smtp.gmail.com' , port=587) as smtp:
-    smtp.ehlo()
-    smtp.starttls()
-    smtp.login('bekwab19@gmail.com','Bek@wab19$$')
-    smtp.send_message(email)
-    print('all good')
+
+
+# Question 17
+# Question:
+#
+#     Write a program that computes the net amount of a bank account based
+# a transaction log from console input. The transaction log format is shown as following:
+#
+# D 100
+# W 200
+#
+#     D means deposit while W means withdrawal.
+#
+#     Suppose the following input is supplied to the program:
+#
+# D 300
+# D 300
+# W 200
+# D 100
+#
+#     Then, the output should be:
+#
+# 500
+
+import sys
+
+from pip._vendor.distlib.compat import raw_input
+
+net_amount=0
+while True:
+    s=raw_input('hdgh')
+    if not s:
+        break
+    value= s.split(' ')
+    operation=value[0]
+    amount=int(value[1])
+    if operation=='D':
+        net_amount+=amount
+    if operation=='W':
+        net_amount-= amount
+print(net_amount)
