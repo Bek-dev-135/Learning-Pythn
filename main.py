@@ -1343,20 +1343,38 @@ import sys
 #
 # ABd1234@1
 
+#
+# import re
+#
+# strng='ABd1234@1,a F1#,2w3E*,2We3345'
+# list=strng.split(',')
+# posble_pass=[]
+# for i in list:
+#
+#     pattern=re.compile(r"[A-Za-z0-9@#$]{6,12}\d")
+#     a=pattern.search(i)
+#     check=pattern.fullmatch(i)
+#
+#     if check!= None:
+#         posble_pass.append(i)
+#
+# for j in posble_pass:
+#     print(j)
 
 import re
 
-strng='ABd1234@1,a F1#,2w3E*,2We3345'
-list=strng.split(',')
-posble_pass=[]
-for i in list:
 
-    pattern=re.compile(r"[A-Za-z0-9@#$]{6,12}\d")
-    a=pattern.search(i)
-    check=pattern.fullmatch(i)
+def multiple(patterns, string):
+    for i in patterns:
+        if not re.search(i, string):
+            return False
 
-    if check!= None:
-        posble_pass.append(i)
+    if 6 <= len(string) <= 12:
+        return True
+    else:
+        return False
 
-for j in posble_pass:
-    print(j)
+
+x = str(input("Type password: "))
+patterns = [r"[a-z]", r"[A-Z]", r"[0-9]", r"[$|#|@]"]
+print(multiple(patterns, x))
