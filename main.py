@@ -1361,20 +1361,27 @@ import sys
 # for j in posble_pass:
 #     print(j)
 
-import re
+# import re
+# 
+# 
+# def multiple(patterns, string):
+#     for i in patterns:
+#         if not re.search(i, string):
+#             return False
+# 
+#     if 6 <= len(string) <= 12:
+#         return True
+#     else:
+#         return False
+# 
+# 
+# x = str(input("Type password: "))
+# patterns = [r"[a-z]", r"[A-Z]", r"[0-9]", r"[$|#|@]"]
+# print(multiple(patterns, x))
 
-
-def multiple(patterns, string):
-    for i in patterns:
-        if not re.search(i, string):
-            return False
-
-    if 6 <= len(string) <= 12:
-        return True
-    else:
-        return False
-
-
-x = str(input("Type password: "))
-patterns = [r"[a-z]", r"[A-Z]", r"[0-9]", r"[$|#|@]"]
-print(multiple(patterns, x))
+from turtle import *
+speed=10
+b=0
+while True:
+    circle(b*3)
+    left(b*1)
