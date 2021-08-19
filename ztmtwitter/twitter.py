@@ -14,7 +14,16 @@ def limithandle(cursor):
             yield cursor.next()
     except tweepy.RateLimitError:
             time.sleep(1000)
-for follower in limithandle(tweepy.Cursor(api.followers).items()):
-    if follower.name=='Hanna':
-        follower.follow()
+
+
+search= 'python'
+numberOfTweets=2
+
+for tweet in tweepy.Cursor(api.search, search).items(numberOfTweets):
+    try:
+        tweet.favorite()
+        print('Retweeted the tweet')
+    except tweepy.TweepError as e:
+        print(e.reason)
+    except StopIteration:
         break
