@@ -1379,9 +1379,30 @@ import sys
 # patterns = [r"[a-z]", r"[A-Z]", r"[0-9]", r"[$|#|@]"]
 # print(multiple(patterns, x))
 
-from turtle import *
-speed=10
-b=0
-while True:
-    circle(b*3)
-    left(b*1)
+# import turtle
+# # t=turtle.Turtle()
+# # list1=['purple','red','orange','blue','green']
+# # for i in range (200):
+# #     t.color(list1[i%5])
+# #     t.pensize(i/10+1)
+# #     t.forward(i)
+# #     t.left(89)
+
+
+
+
+
+
+
+from twilio.rest import Client
+
+
+client = Client(account_sid, auth_token)
+
+message = client.messages.create(
+    messaging_service_sid='MGad3abad9ad8642a189bd155d63fe8e21',
+    body='Hi ',
+    to='+48579112706'
+)
+
+print(message.sid)
