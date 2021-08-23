@@ -1433,12 +1433,17 @@ import sys
 #
 # [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 
-tutus=[('Tom',19,80)
-('John',20,90)
-('Jony',17,91)
-('Jony',17,93)
-('Json',21,85)
-]
-for items in tutus:
-    for i in range (2):
-        item
+
+from pip._vendor.distlib.compat import raw_input
+tutus=[]
+while True:
+    s=((raw_input('hdgh')))
+    b=tuple(s.split(','))
+    if not s:
+        break
+    tutus.append(b)
+
+sorted3= sorted(tutus, key=lambda tup: tup[2])
+sorted2= sorted(tutus, key=lambda tup: tup[1])
+sorted1= sorted(tutus, key=lambda tup: tup[0])
+print(sorted1)
