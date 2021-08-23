@@ -1395,8 +1395,8 @@ import sys
 
 #
 # from twilio.rest import Client
-# account_sid = 'AC7ef7602d16778e5dff675e3cec82ec9b'
-# auth_token = '149e29cb5259d1ba047e97c1ec1f835f'
+# account_sid = ''
+# auth_token = ''
 #
 # client = Client(account_sid, auth_token)
 #
