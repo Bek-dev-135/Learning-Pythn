@@ -1393,16 +1393,52 @@ import sys
 
 
 
+#
+# from twilio.rest import Client
+# account_sid = 'AC7ef7602d16778e5dff675e3cec82ec9b'
+# auth_token = '149e29cb5259d1ba047e97c1ec1f835f'
+#
+# client = Client(account_sid, auth_token)
+#
+# message = client.messages.create(
+#     messaging_service_sid='MGad3abad9ad8642a189bd155d63fe8e21',
+#     body='Hi ',
+#     to='+48579112706'
+# )
+#
+# print(message.sid)
 
-from twilio.rest import Client
+#
+# Question 19
+# Question:
+#
+#     You are required to write a program to sort the (name, age, score) tuples by
+# ascending order where name is string, age and score are numbers. The tuples are input by console. The sort criteria is:
+#
+#     1: Sort based on name
+#     2: Then sort based on age
+#     3: Then sort by score
+#
+#     The priority is that name > age > score.
+#
+#     If the following tuples are given as input to the program:
+#
+# Tom,19,80
+# John,20,90
+# Jony,17,91
+# Jony,17,93
+# Json,21,85
+#
+#     Then, the output of the program should be:
+#
+# [('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
 
-
-client = Client(account_sid, auth_token)
-
-message = client.messages.create(
-    messaging_service_sid='MGad3abad9ad8642a189bd155d63fe8e21',
-    body='Hi ',
-    to='+48579112706'
-)
-
-print(message.sid)
+tutus=[('Tom',19,80)
+('John',20,90)
+('Jony',17,91)
+('Jony',17,93)
+('Json',21,85)
+]
+for items in tutus:
+    for i in range (2):
+        item
